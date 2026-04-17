@@ -1,0 +1,12 @@
+.DS_Store
+*.swp
+*.swo
+*~
+.env
+node_modules/
+.claude/
+fonts/
+generate_pdf.py
+founders-share-agreement.md
+founders-share-agreement.html
+founders-share-agreement.pdf
