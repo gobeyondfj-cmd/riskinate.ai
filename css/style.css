@@ -185,6 +185,59 @@ section { padding: 100px 0; }
 .team-card .role { font-size: .9rem; color: #6c63ff; margin-bottom: 12px; }
 .team-card p { font-size: .9rem; color: #8892a4; }
 
+/* === Pricing === */
+.pricing-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; margin: 20px 0;
+}
+.pricing-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px; padding: 32px 24px;
+  text-align: center; position: relative;
+  transition: border-color .3s, transform .3s;
+}
+.pricing-card:hover {
+  border-color: rgba(108,99,255,.35);
+  transform: translateY(-4px);
+}
+.pricing-featured {
+  border-color: rgba(108,99,255,.4);
+  background: rgba(108,99,255,.06);
+}
+.pricing-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: #6c63ff; color: #fff; font-size: .75rem; font-weight: 700;
+  padding: 4px 16px; border-radius: 20px; text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.pricing-tier {
+  font-size: 1.1rem; font-weight: 700; color: #6c63ff;
+  margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;
+}
+.pricing-price {
+  font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 4px;
+}
+.pricing-price span { font-size: .9rem; font-weight: 500; color: #8892a4; }
+.pricing-target {
+  font-size: .85rem; color: #8892a4; margin-bottom: 20px;
+}
+.pricing-features {
+  list-style: none; padding: 0; margin: 0 0 24px; text-align: left;
+}
+.pricing-features li {
+  padding: 6px 0; font-size: .9rem; color: #c0c8d4;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.pricing-features li::before {
+  content: "\2713 "; color: #6c63ff; font-weight: bold; margin-right: 6px;
+}
+.pricing-features li:last-child { border-bottom: none; }
+.pricing-btn { width: 100%; display: block; text-align: center; }
+.pricing-note {
+  text-align: center; font-size: .9rem; color: #8892a4; margin-top: 24px;
+}
+
 /* === CTA === */
 .cta-section {
   text-align: center;
@@ -204,6 +257,7 @@ section { padding: 100px 0; }
 @media (max-width: 768px) {
   .hero h1 { font-size: 2.2rem; }
   .features-grid, .steps-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
   .screenshot-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
