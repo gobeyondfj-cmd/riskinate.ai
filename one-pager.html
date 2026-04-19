@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riskinate.AI - One Pager</title>
+<style>
+  @page { size: A4; margin: 2cm; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0a0e17;
+    color: #e0e6ed;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid rgba(108,99,255,.3);
+    padding-bottom: 24px;
+  }
+  .header h1 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .header h1 span { color: #6c63ff; }
+  .header .tagline {
+    font-size: 1.1rem;
+    color: #8892a4;
+  }
+  h2 {
+    font-size: 1.3rem;
+    color: #6c63ff;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  .problem-box {
+    background: rgba(255,80,80,.08);
+    border: 1px solid rgba(255,80,80,.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .problem-box h3 { color: #ff6b6b; margin-bottom: 8px; font-size: 1.1rem; }
+  .problem-box ul { padding-left: 20px; margin: 0; }
+  .problem-box li { margin-bottom: 6px; color: #c0c8d4; }
+  .solution-box {
+    background: rgba(108,99,255,.08);
+    border: 1px solid rgba(108,99,255,.25);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .solution-box h3 { color: #6c63ff; margin-bottom: 8px; font-size: 1.1rem; }
+  .solution-box ul { padding-left: 20px; margin: 0; }
+  .solution-box li { margin-bottom: 6px; color: #c0c8d4; }
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  .compare-card {
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .compare-old {
+    background: rgba(255,80,80,.06);
+    border: 1px solid rgba(255,80,80,.15);
+  }
+  .compare-new {
+    background: rgba(108,99,255,.06);
+    border: 1px solid rgba(108,99,255,.2);
+  }
+  .compare-card h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .compare-old h3 { color: #ff6b6b; }
+  .compare-new h3 { color: #6c63ff; }
+  .compare-card .metric {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    font-size: 0.9rem;
+  }
+  .compare-card .metric:last-child { border-bottom: none; }
+  .compare-card .metric .label { color: #8892a4; }
+  .compare-card .metric .value { color: #fff; font-weight: 600; }
+  .value-props {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .value-card {
+    text-align: center;
+    padding: 20px 12px;
+    background: rgba(108,99,255,.06);
+    border: 1px solid rgba(108,99,255,.15);
+    border-radius: 12px;
+  }
+  .value-card .number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #6c63ff;
+    margin-bottom: 4px;
+  }
+  .value-card .desc {
+    font-size: 0.85rem;
+    color: #8892a4;
+  }
+  .features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 24px;
+    margin: 12px 0;
+  }
+  .features-list li {
+    list-style: none;
+    padding: 4px 0;
+    font-size: 0.9rem;
+    color: #c0c8d4;
+  }
+  .features-list li::before {
+    content: "✓ ";
+    color: #6c63ff;
+    font-weight: bold;
+  }
+  .cta {
+    text-align: center;
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 2px solid rgba(108,99,255,.3);
+  }
+  .cta p { color: #8892a4; margin-bottom: 12px; }
+  .cta a {
+    display: inline-block;
+    background: #6c63ff;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .cta .contact { margin-top: 12px; font-size: 0.9rem; color: #8892a4; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Riskinate<span>.AI</span></h1>
+  <p class="tagline">AI-Powered Risk Detection for Crypto Exchanges — Deploy in Weeks, Not Months</p>
+</div>
+
+<h2>The Problem</h2>
+<div class="problem-box">
+  <h3>Building an in-house risk system is expensive, slow, and complex</h3>
+  <ul>
+    <li>Requires 30+ developers, data engineers, risk strategy analysts, product managers, and project managers</li>
+    <li>Takes 6-12 months to build a basic rule engine from scratch</li>
+    <li>Ongoing maintenance, tuning, and scaling costs millions annually</li>
+    <li>Manual case review creates bottlenecks — compliance teams drown in false positives</li>
+    <li>Regulatory pressure is increasing (MiCA, Travel Rule, FATF) with tight deadlines</li>
+  </ul>
+</div>
+
+<h2>The Solution</h2>
+<div class="solution-box">
+  <h3>Riskinate.AI: Full-stack risk intelligence, deployed in 1-2 weeks</h3>
+  <ul>
+    <li><strong>Rule Engine</strong> — Pre-built, configurable fraud & AML rules ready out of the box</li>
+    <li><strong>Risk Strategy</strong> — AI-driven risk scoring and decision models, no manual tuning needed</li>
+    <li><strong>Risk Agent (LLM + Multi-Agent)</strong> — Autonomous case review powered by large language models, eliminating 80% of manual review workload</li>
+  </ul>
+</div>
+
+<h2>Head-to-Head Comparison</h2>
+<div class="comparison">
+  <div class="compare-card compare-old">
+    <h3>Traditional In-House Build</h3>
+    <div class="metric"><span class="label">Time to Deploy</span><span class="value">6-12 months</span></div>
+    <div class="metric"><span class="label">Team Required</span><span class="value">30+ people</span></div>
+    <div class="metric"><span class="label">Annual Cost</span><span class="value">$2M - $5M+</span></div>
+    <div class="metric"><span class="label">Manual Review</span><span class="value">100% cases</span></div>
+    <div class="metric"><span class="label">Rule Updates</span><span class="value">Weeks per change</span></div>
+    <div class="metric"><span class="label">Scalability</span><span class="value">Limited by team</span></div>
+  </div>
+  <div class="compare-card compare-new">
+    <h3>Riskinate.AI</h3>
+    <div class="metric"><span class="label">Time to Deploy</span><span class="value">1-2 weeks</span></div>
+    <div class="metric"><span class="label">Team Required</span><span class="value">0 (managed)</span></div>
+    <div class="metric"><span class="label">Annual Cost</span><span class="value">90% less</span></div>
+    <div class="metric"><span class="label">Manual Review</span><span class="value">20% cases only</span></div>
+    <div class="metric"><span class="label">Rule Updates</span><span class="value">Real-time AI</span></div>
+    <div class="metric"><span class="label">Scalability</span><span class="value">Unlimited</span></div>
+  </div>
+</div>
+
+<h2>Key Metrics</h2>
+<div class="value-props">
+  <div class="value-card">
+    <div class="number">80%</div>
+    <div class="desc">Reduction in Manual Case Review</div>
+  </div>
+  <div class="value-card">
+    <div class="number">1-2 wks</div>
+    <div class="desc">Deployment Time vs 6-12 Months</div>
+  </div>
+  <div class="value-card">
+    <div class="number">90%</div>
+    <div class="desc">Cost Savings vs In-House Build</div>
+  </div>
+</div>
+
+<h2>What You Get</h2>
+<ul class="features-list">
+  <li>Fraud detection (account takeover, fake identity, unauthorized transactions)</li>
+  <li>AML compliance (transaction monitoring, sanctions screening, SAR filing)</li>
+  <li>Trading risk (market manipulation, wash trading, abnormal patterns)</li>
+  <li>LLM-powered case review agent (auto-investigate, auto-resolve)</li>
+  <li>Pre-built rule engine (100+ rules, configurable)</li>
+  <li>Real-time alerting and dashboards</li>
+  <li>API-first integration (connect in days)</li>
+  <li>Regulatory reporting (MiCA, Travel Rule ready)</li>
+</ul>
+
+<div class="cta">
+  <p>Ready to protect your exchange without the cost and complexity of building in-house?</p>
+  <a href="mailto:support@riskinate.ai">Request a Demo</a>
+  <p class="contact">support@riskinate.ai &nbsp;|&nbsp; www.riskinate.ai</p>
+</div>
+
+</body>
+</html>
